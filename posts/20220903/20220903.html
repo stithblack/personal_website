@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stith.black</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="img">
+        <img src="/images/profile.png" alt="Face not to scale" class="center">
+        </div>
+        <br>
+        <h2>stith.black</h2>
+        <ul>
+            <li><a href="/index.html"><i class="bx bxs-home-alt-2"></i> Home </a></li>
+            <li><a href="/catalog.html"><i class="bx bxs-chat"></i> Posts </a></li>
+            <li><a href="/resume.html"><i class="bx bx-book-open"></i> Resume </a></li>
+        </ul>
+        <div class="social_media">
+            <a href="https://github.com/stithblack" target="_blank" class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-stith-78b35215a/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="https://www.twitter.com/stithblack/" target="_blank" class="bx bxl-twitter"></i></a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="header"><h2>Hosting a Static Website Using AWS</h2></div>
+        <div class="info">
+            <div class="post">
+                <p>Last July, I passed the AWS Cloud Practitioner exam. I don't currently utilize AWS at my current job role, so I wanted to find a project I could use to practice using some of the services I had spent time learning. I came across the <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge</a>, and felt like it was a chill, well rounded way to achieve that goal. Then I went full bore and wound up with a small website.</p>
+                <br>
+                <p>When starting the challenge, the first thing I did was find a suitable HTML template for my resume. The last time I did anything with HTML was a couple years ago for one of my college classes, but modifying the template to show my information wasn't difficult. I didn't make any changes to the CSS. Then, I created an S3 bucket, uploaded my webpage files, and configured the bucket for use as a static website. After that I registered a domain using Route 53, created a CloudFront distribution, and configured them both to provide the content of the bucket. At times, I had to stop and figure out why certain components weren't working, but it helped me gain a better understanding of how the services work together and how websites in general function.</p>
+                <br>
+                <div id="container">
+                    <img src="1.png" alt="Form and function.">
+                </div>
+                <br>
+                <p>I completed the first 6 conditions of the Cloud Resume Challenge and went live. The other steps involve adding more functionality to the basic webpage, but I wanted to spend time adding those components gradually over time.</p>
+                <br>
+                <p>Then I got to thinking: why stop with just a resume? Why not add a little more functionality to mold a little home base for all projects, not just web or AWS related?</p>
+                <br>
+                <p>My goal then became to fold the resume into a site for hosting blog posts. I found a few videos on YouTube that demonstrated how to set up a sidebar, as well as open source icon libraries like Boxicon and Font Awesome. I used some CSS resources to help with styling, and modified a few things to better suit my sense of design. I incorporated the picture from my resume into the sidebar, and included links to my Github, LinkedIn, and Twitter pages.  In the future, I know I want to add a search feature for future posts, but for now navigating the content is manageable. I'm trying to be mindful of file and folder structure so scaling isn't a huge pain. Automatically pushing code updates to the S3 bucket using Github would be cash money too, bro.</p>
+                <br>
+                <p>It's not much, but I feel that fuzzy feeling of accomplishment that motivates me to create and build things of my own. I look forward to the projects that are yet to come.</p>   
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
