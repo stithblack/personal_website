@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stith.black</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="img">
+        <img src="/images/profile.png" alt="Face not to scale" class="center">
+        </div>
+        <br>
+        <h2>stith.black</h2>
+        <ul>
+            <li><a href="/index.html"><i class="bx bxs-home-alt-2"></i> Home </a></li>
+            <li><a href="/catalog.html"><i class="bx bxs-chat"></i> Posts </a></li>
+            <li><a href="/resume.html"><i class="bx bx-book-open"></i> Resume </a></li>
+        </ul>
+        <div class="social_media">
+            <a href="https://github.com/stithblack" target="_blank" class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-stith-78b35215a/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="https://www.twitter.com/stithblack/" target="_blank" class="bx bxl-twitter"></i></a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="header"><h2>Publishing an Extension to the Google Chrome Web Store</h2></div>
+        <div class="info">
+            <div class="post">
+                <p>I'm at the stage in my journey where I/m constantly researching online for examples and how to do things (shoutout to Stack Overflow for coming in clutch numerous times). Another wretched hive of scum and villainy where I like to search for answers is Reddit. I'm probably part of the minority here, but I enjoyed that place before their big redesign a few years ago. the site went from "dystopian craigslist" (<a href="https://www.wired.com/story/reddit-redesign/">his words, not mine</a>) to "you got social media in my GameFAQs", and it's been downhill ever since. still, modern solutions to modern problems can sometimes be found there, and I decided to try and make my browsing experience a little less infuriating.</p>
+                <br>
+                <p>Luckily for me, reddit retains their old layout at "old.reddit.com". Everything with the new look at "www.reddit.com" can be accessed by substituting the "www" with "old".</p>
+                <br>
+                <p>A few years ago, I whipped up a little chrome extension that would load a random subreddit with just a click. It worked well, so naturally I buried it in my GitHub and forgot about it. Today, I wanted to see if I could come up with a similar solution to redirect reddit in the browser to the old layout.</p>
+                <br>
+                <p>First, I started by figuring out how I wanted to perform the redirection using JavaScript. I used the "window.location.href" property to return the URL of the current page and store it in a value. Then, I created a function to load the page with the "old" by concatenating the original URLs string after ".com/". I used the console in chrome's dev tools to test the code a few times and fix any errors. it works, albeit quite clunkily, but in this case I'm willing to prioritize functionality over polish.</p>
+                <br>
+                <p>One manifest JSON, a pitiful attempt at a logo, and two lazy screenshots later, my extension was ready to ship.</p>
+                <br>
+                <div>
+                    <img src="1.png" alt="It has a beard, so it's old.">
+                </div>
+                <p>I went to the chrome developer dashboard, created my developer account, and went through the steps to upload and submit the extension for review. At this time, it's still pending - but you can find the repo for it on my GitHub. You can even download the files and load the package into your chrome browser if you don't feel like waiting for the official release.</p>
+                <br>
+                <p>This project helped me accomplish three things- apply some new concepts I've been learning in JavaScript, revisit the process of creating, testing, and publishing an extension for Google Chrome, and exercise my mind in the realm of development.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
