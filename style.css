@@ -84,11 +84,31 @@ img{
   color: #8f8f91;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.wrapper .sidebar .social_media a:hover{
+  transition: transform 150ms;
+  transform: translateY(-10px);
 }
 
 .wrapper .main_content{
   width: 100%;
   margin-left: 200px;
+  animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 10;
+    transform: rotateX(0);
+  }
 }
 
 .wrapper .main_content .header{
