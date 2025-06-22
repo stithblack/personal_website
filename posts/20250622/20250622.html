@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stith.black</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="img">
+        <img src="/images/profile.png" alt="Face not to scale" class="center">
+        </div>
+        <br>
+        <h2>stith.black</h2>
+        <ul>
+            <li><a href="/index.html"><i class="bx bxs-home-alt-2"></i> Home </a></li>
+            <li><a href="/catalog.html"><i class="bx bxs-chat"></i> Posts </a></li>
+            <li><a href="/resume.html"><i class="bx bx-book-open"></i> Resume </a></li>
+        </ul>
+        <div class="social_media">
+            <a href="https://github.com/stithblack" target="_blank" class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-stith-78b35215a/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="https://www.twitter.com/stithblack/" target="_blank" class="bx bxl-twitter"></i></a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="header"><h2>Self Hosting LLMs using Ollama and Open WebUI</h2></div>
+        <div class="info">
+            <div class="post">
+                <p>When DeepSeek hit the scene back in January, I started thinking about ways I could run large language models locally on my own hardware. It wasn't long after that I found out about <a href="https://ollama.com/">Ollama</a>, an open source framework that could do exactly that.</p>
+                <br>
+                <p>I repurposed a Zotac Magnus One mini PC that I bought a while ago for this project. I was using it to run weekly backups for my fileshare, but this computer came with an nVidia RTX 3070 and enough storage to make it perfect for running a handful of AI models. I installed Ollama in Windows 11 and ran it via PowerShell. From there, I pulled the 8b parameter DeepSeek model and began running queries.</p>
+                <br>
+                <div id="container">
+                    <img src="1.png" alt="Querying DeepSeek using Ollama in PowerShell.">
+                </div>
+                <br>
+                <p>Using PowerShell was one thing, but what if I could set up a web portal to be able to utilize Ollama from multiple devices on my home network? Enter <a href="https://docs.openwebui.com/#open-webui-bundled-with-ollama">Open WebUI</a>- a platform that, like its name suggests, provides a web interface experience similar to ChatGPT, Copilot, and Gemini for offline models running on local hardware and can be deployed using a Docker container.</p>
+                <br>
+                <p>I installed Docker Desktop on the same computer running Ollama, and pulled the Open WebUI container image. After tweaking a few settings to autorestart the container after a system restart, I navigated to the instance from my browser and set up a local account. From there, I was able to start using it without any additional set up.</p>
+                <br>
+                <div id="container">
+                    <img src="2.png" alt="Open WebUI interface in the browser.">
+                </div>
+                <br>
+                <p>I enjoy the convenience of being able to switch between models to compare their outputs, and the interface keeps a history of my conversations. I can also set system prompts for specific models, which helps refine their responses. Multiple accounts can be created, so you can allow other members of you living space to use Open WebUI while managing their access to downloaded models and keep their prompts separated.</p>
+                <br>
+                <p>Since setting this up, Open WebUI has created a Docker image that's bundled with Ollama that elimiates the need to configure the Windows Subsystem for Linux (which was a prerequisite until to now). There will probably come a time where I start from stratch and replace the hard drive in my computer with a larger one to fit larger models, and that would be a perfect time to reinstall Ollama and Open WebUI in the same container.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
